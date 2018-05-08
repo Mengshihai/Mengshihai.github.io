@@ -504,7 +504,7 @@ nav .caret{
 	width:100%;
 	max-width: 100%;
 	margin-top: 0;
-	padding: 20px;
+	padding: 0px;
 }
 .fill-bloc-top-edge.sticky .navbar{
 	max-width: 1170px;
