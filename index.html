@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="Default">
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
@@ -12,13 +12,14 @@
 	<link rel="stylesheet" type="text/css" href="./css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/ionicons.min.css">
+	
     
 	<script src="./js/jquery-2.1.0.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/blocs.min.js"></script>
 	<script src="./js/jquery.touchSwipe.min.js" defer></script>
 	<script src="./js/lazysizes.min.js" defer></script>
-    <title>蒙世海设计博客</title>
+    <title>世海设计博客</title>
 
     
 <!-- Google Analytics -->
@@ -31,7 +32,7 @@
 <div class="page-container">
     
 <!-- bloc-0 -->
-<div class="bloc bloc-fill-screen bgc-white b-parallax bg-bj1 l-bloc" id="bloc-0">
+<div class="bloc bloc-fill-screen bgc-white b-parallax bg-bj1 l-bloc " id="bloc-0">
 	<div class="container fill-bloc-top-edge b-divider-dashed sticky-nav">
 		<nav class="navbar row">
 			<div class="navbar-header">
@@ -43,26 +44,26 @@
 			<div class="collapse navbar-collapse navbar-1">
 				<ul class="site-navigation nav navbar-nav pull-right">
 					<li>
-						<a class="ltc-olive-drab-7" id="pl-undefined" onclick="scrollToTarget('#jn')">关于我</a>
+						<a class="pull-left" onclick="scrollToTarget(2)" id="pl-undefined">关于我</a>
 					</li>
 					<li>
-						<a class="ltc-olive-drab-7" id="pl-undefined" onclick="scrollToTarget('#ca')">技能</a>
+						<a onclick="scrollToTarget('#bloc-2')" id="pl-undefined">个人技能</a>
 					</li>
 					<li>
-						<a href="index.html" class="ltc-olive-drab-7">作品</a>
+						<a onclick="scrollToTarget('#bloc-3')" id="pl-undefined">我的作品</a>
 					</li>
 					<li>
-						<a href="index.html" class="ltc-olive-drab-7">MD动效</a>
+						<a onclick="scrollToTarget('#bloc-4')" id="pl-undefined">设计感悟</a>
 					</li>
 					<li>
-						<a href="index.html" class="ltc-olive-drab-7">联系我</a>
+						<a onclick="scrollToTarget('2')" id="pl-undefined">联系我</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 	</div>
 	<div class="container b-divider-dashed">
-		<div class="row">
+		<div class="row voffset">
 			<div class="col-sm-12">
 				<h1 class="text-center mountain-hero-text fadeInUp  animated">
 					蒙世海 - 设计博客
@@ -71,7 +72,7 @@
 					设计对我来说，不是生命；而是生活。
 				</h3>
 				<div class="text-center noneLeft none noneDown">
-					<a href="index.html" class="btn animDelay1 btn-xl btn-wire fadeIn wire-btn-white animated">关于我<br></a>
+					<a onclick="scrollToTarget('#bloc-2')" class="btn animDelay1 btn-xl btn-wire fadeIn wire-btn-white animated">关于我<br></a>
 				</div>
 			</div>
 		</div>
@@ -86,8 +87,8 @@
 </div>
 <!-- bloc-0 END -->
 
-<!-- pa -->
-<div class="bloc bgc-white bg-guanyu d-bloc" id="pa">
+<!-- vb -->
+<div class="bloc bgc-white bg-guanyu d-bloc" id="vb">
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-12">
@@ -97,52 +98,40 @@
 				<p class="text-center blocs-team-sub ">
 					About me
 				</p>
+				<p class="blocs-team-sub  text-left">
+					<br>&nbsp;热爱视觉艺术，对美有敏锐且丰富的感知力，认为“设计”是人类和信息之间的语言枢纽。 对新鲜事物有强烈的好奇心和学历欲，执着追求一切美好。在多种项目中，负责产品的提案，原型设计、界面美化以及AE视频宣传工作。详细了解整个APP从提案到上线的整个过程。熟悉产品界面的设计趋势，对视觉设计、色彩有敏锐的观察力以及分析能力, 具有较强的设计创新能力；人的一生那么长，就应该跟有趣的人做些有趣的事！ <br><br>
+				</p>
 			</div>
 		</div>
 		<div class="row voffset-lg icon01">
-			<div class="col-sm-3">
-				<img src="img/wode.png" class="img-responsive center-block" />
+			<div class="col-sm-3"> <img src="img/grr.png" class="img-responsive pulse-hvr center-block animated" />
 				<h3 class="text-center blocs-team-header  tc-white">
 					男，94年
-				</h3>
-			</div>
+			  </h3>
+		  </div>
 			<div class="col-sm-3">
-				<img src="img/jiguan.png" class="img-responsive center-block" />
+				<img src="img/jg.png" class="img-responsive center-block pulse-hvr animated" />
 				<h3 class="text-center blocs-team-header  tc-white">
 					籍贯：贵州
 				</h3>
 			</div>
 			<div class="col-sm-3">
-				<img src="img/xuexiao.png" class="img-responsive center-block" />
+				<img src="img/xx.png" class="img-responsive center-block pulse-hvr animated" />
 				<h3 class="text-center blocs-team-header  tc-white">
 					江西工程学院
 				</h3>
 			</div>
 			<div class="col-sm-3">
-				<img src="img/shou.png" class="img-responsive center-block" />
+				<img src="img/sj.png" class="img-responsive center-block pulse-hvr animated" />
 				<h3 class="text-center blocs-team-header  tc-white">
 					18658822090
 				</h3>
 			</div>
 		</div>
 	</div>
-	<svg class="editorial" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
-					 <defs>
-					  <path id="gentle-wave" d="m -160,44.4 c 30,0 58,
-					        -18 87.7,-18 30.3,0 58.3,
-					        18 87.3,18 30,0 58,-18 88,
-					        -18 30,0 58,18 88,18 l 0,
-					        34.5 -351,0 z"></path>
-					 </defs>
-					  <g class="parallax">
-					   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gentle-wave" x="50" y="0" fill="rgba(255,255,255,0.15)"></use>
-					   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gentle-wave" x="50" y="3" fill="rgba(255,255,255,0.15)"></use> 
-					  </g>
-				</svg>
+	
 </div>
-<!-- pa END -->
-
-
+<!-- vb END -->
 
 <!-- bloc-2 -->
 <div class="bloc tc-manatee bgc-ghost-white l-bloc" id="bloc-2">
@@ -153,14 +142,14 @@
 					个人技能
 				</h2>
 				<p class="text-center blocs-team-sub ">
-					Personal skills
+					Personal skills <br> <br><br>
 				</p>
 			</div>
 		</div>
 		<div class="row a">
 			<div class="col-sm-4">
 				<div class="text-center">
-					<a href="downloads/No Download" target="_blank"><span class="ion ion-android-phone-portrait none icon-md icon-round"></span></a>
+					<a href="#" target="_blank"><span class="ion ion-android-phone-portrait none icon-md icon-round"></span></a>
 				</div>
 				<h3 class="text-center mg-md tc-olive-drab-7">
 					视觉设计
@@ -171,7 +160,7 @@
 			</div>
 			<div class="col-sm-4">
 				<div class="text-center none">
-					<a href="downloads/No Download" target="_blank"><span class="ion ion-shuffle icon-md icon-round"></span></a>
+					<a href="#" target="_blank"><span class="ion ion-shuffle icon-md icon-round"></span></a>
 				</div>
 				<h3 class="text-center mg-md tc-olive-drab-7">
 					交互设计
@@ -182,7 +171,7 @@
 			</div>
 			<div class="col-sm-4">
 				<div class="text-center">
-					<a href="downloads/No Download" target="_blank"><span class="ion ion-social-instagram icon-round icon-md"></span></a>
+					<a href="#" target="_blank"><span class="ion ion-social-instagram icon-round icon-md"></span></a>
 				</div>
 				<h3 class="text-center mg-md tc-olive-drab-7">
 					动效设计
@@ -195,7 +184,7 @@
 		<div class="row voffset">
 			<div class="col-sm-4">
 				<div class="text-center">
-					<a href="downloads/No Download" target="_blank"><span class="ion ion-android-desktop icon-round icon-md"></span></a>
+					<a href="#" target="_blank"><span class="ion ion-android-desktop icon-round icon-md"></span></a>
 				</div>
 				<h3 class="text-center mg-md tc-olive-drab-7">
 					前端架构
@@ -206,7 +195,7 @@
 			</div>
 			<div class="col-sm-4">
 				<div class="text-center none">
-					<a href="downloads/No Download" target="_blank"><span class="ion ion-android-playstore icon-md icon-round"></span></a>
+					<a href="#" target="_blank"><span class="ion ion-android-playstore icon-md icon-round"></span></a>
 				</div>
 				<h3 class="text-center mg-md tc-olive-drab-7">
 					MG设计
@@ -217,7 +206,7 @@
 			</div>
 			<div class="col-sm-4">
 				<div class="text-center">
-					<a href="downloads/No Download" target="_blank"><span class="ion ion-cube icon-round icon-md none"></span></a>
+					<a href="#" target="_blank"><span class="ion ion-cube icon-round icon-md none"></span></a>
 				</div>
 				<h3 class="text-center mg-md tc-olive-drab-7">
 					产品设计
@@ -232,7 +221,7 @@
 <!-- bloc-2 END -->
 
 <!-- bloc-3 -->
-<div class="bloc bgc-white tc-manatee " id="bloc-3">
+<div class="bloc tc-manatee bgc-white" id="bloc-3">
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-12">
@@ -240,94 +229,91 @@
 					我的作品
 				</h2>
 				<p class="text-center blocs-team-sub ">
-					My work
+					My work <br><br>
 				</p>
 			</div>
 		</div>
-		<div class="row voffset">
+		<div class="row voffset-lg">
 			<div class="col-sm-4">
-				<a data-lightbox="img/01.png" data-gallery-id="gallery-1" target="_blank"><img src="img/lazyload-ph.png" data-src="img/01.png" class="img-responsive img-frame center-block lazyload" /></a>
+				<a href="#" data-lightbox="img/01.png" data-gallery-id="gallery-1"><img src="img/lazyload-ph.png" data-src="img/01.png" class="img-responsive center-block lazyload" /></a>
+				<h3 class="text-center mg-md ">
+					喜悦-引导页
+				</h3>
 			</div>
 			<div class="col-sm-4">
-				<a href="#" data-lightbox="vid/demo002.mp4" data-gallery-id="gallery-1" data-autoplay="1"><img src="img/lazyload-ph.png" data-src="img/demo001.png" class="img-responsive img-frame center-block lazyload" /></a>
+				<a href="#" data-lightbox="vid/demo002.mp4" data-gallery-id="gallery-1" data-autoplay="1"><img src="img/lazyload-ph.png" data-src="img/demo1.png" class="img-responsive center-block lazyload" /></a>
+				<h3 class="text-center mg-md ">
+					ROMANCE-Demo
+				</h3>
 			</div>
 			<div class="col-sm-4">
-				<a href="#" data-lightbox="vid/demo001.mp4" data-autoplay="1"><img src="img/lazyload-ph.png" data-src="img/demo2.png" class="img-responsive center-block img-frame lazyload" /></a>
+				<a href="#" data-lightbox="vid/demo001_1.mp4" data-gallery-id="gallery-1" data-autoplay="1"><img src="img/lazyload-ph.png" data-src="img/demo2.png" class="img-responsive center-block lazyload" /></a>
+				<h3 class="text-center mg-md ">
+					交互-Dome
+				</h3>
 			</div>
 		</div>
-		<div class="row voffset">
+		<div class="row voffset-lg voffset">
 			<div class="col-sm-4">
-				<a href="#" data-lightbox="img/newyork.jpg" data-gallery-id="gallery-1"><img src="img/lazyload-ph.png" data-src="img/newyork.jpg" class="img-responsive lazyload" /></a>
+				<a href="http://www.zcool.com.cn/work/ZMjY3MDM0NDA=.html" target="_blank"><img src="img/lazyload-ph.png" data-src="img/xiyue0.png" class="img-responsive center-block lazyload" /></a>
+				<h3 class="text-center mg-md ">
+					喜悦
+				</h3>
 			</div>
 			<div class="col-sm-4">
-				<a href="#" data-lightbox="img/field.jpg" data-gallery-id="gallery-1"><img src="img/lazyload-ph.png" data-src="img/field.jpg" class="img-responsive lazyload" /></a>
+				<a href="http://www.zcool.com.cn/work/ZMjY4MTgxMTY=.html" target="_blank"><img src="img/lazyload-ph.png" data-src="img/Health.png" class="img-responsive center-block lazyload" /></a>
+				<h3 class="text-center mg-md ">
+					Health-Material Design
+				</h3>
 			</div>
 			<div class="col-sm-4">
-				<a href="#" data-lightbox="img/cornfield.jpg" data-gallery-id="gallery-1"><img src="img/lazyload-ph.png" data-src="img/cornfield.jpg" class="img-responsive lazyload" /></a>
+				<a href="#" data-lightbox="img/cha.png" data-gallery-id="gallery-1"><img src="img/lazyload-ph.png" data-src="img/cha.png" class="img-responsive center-block lazyload" /></a>
+				<h3 class="text-center mg-md ">
+					Health-引导页
+				</h3>
 			</div>
 		</div>
 	</div>
 </div>
 <!-- bloc-3 END -->
 
-<!-- ac -->
-<div class="bloc bgc-ghost-white l-bloc" id="ac">
+<!-- bloc-4 -->
+<div class="bloc bgc-ghost-white tc-manatee" id="bloc-4">
 	<div class="container bloc-lg">
 		<div class="row">
-			<div class="col-sm-4">
-				<img src="img/lazyload-ph.png" data-src="img/placeholder-image.png" class="img-responsive lazyload" />
-				<h3 class="mg-md">
-					Title goes here
-				</h3>
-				<p>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+			<div class="col-sm-12">
+				<h2 class="text-center blocs-team-title  tc-olive-drab-7">
+					设计感悟
+				</h2>
+				<p class="sub-heading text-center">
+					Design sentiment <br><br>
 				</p>
-			</div>
-			<div class="col-sm-4">
-				<img src="img/lazyload-ph.png" data-src="img/placeholder-image.png" class="img-responsive lazyload" />
-				<h3 class="mg-md">
-					Title goes here
+				<h3 class="statement-bloc-text  text-left tc-olive-drab-7">
+					<span>时刻保持着与时俱进的理念，随着时代不断的发展与进步，设计也在不停的演变<br>属于这个时代的风格，所以我们必须追求与时俱进。 <br> <br>“冰冻三尺非一日之寒”，设计需要日积月累，不懈地努力奋斗。积累是一种毅力，<br>是由微小到伟大的必经之路，是成功的前提，是由量变到质变的过程。 <br> <br>实践才是体验设计的唯一标准；坐着空想不如动动手，很多创意和效果就是偶然<br>拼凑产生的。敢于推翻自己，当修改无济于事时，就推翻这一稿重新构思。</span><br>
 				</h3>
-				<p>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-				</p>
-			</div>
-			<div class="col-sm-4">
-				<img src="img/lazyload-ph.png" data-src="img/placeholder-image.png" class="img-responsive lazyload" />
-				<h3 class="mg-md">
-					Title goes here
-				</h3>
-				<p>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-				</p>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- ac END -->
+<!-- bloc-4 END -->
 
 <!-- cn -->
 <div class="bloc bgc-white l-bloc" id="cn">
 	<div class="container bloc-lg">
 		<div class="row">
-			<div class="col-sm-3">
+			<div class="col-sm-4">
 				<div class="text-center">
-					<a class="social-lg" href="index.html"><span class="fa fa-twitter icon-md"></span></a>
+					<a class="social-lg" href="index.html"><span class="ion ion-social-dribbble-outline icon-md"></span></a>
 				</div>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-sm-4">
 				<div class="text-center">
-					<a class="social-lg" href="index.html"><span class="fa fa-facebook icon-md"></span></a>
+					<a class="social-lg" target="_blank"><span class="fa fa-behance icon-md"></span></a>
 				</div>
 			</div>
-			<div class="col-sm-3">
+			<div class="col-sm-4">
 				<div class="text-center">
-					<a class="social-lg" target="_blank"><span class="fa fa-dribbble icon-md"></span></a>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="text-center">
-					<a class="social-lg" href="index.html"><span class="fa fa-instagram icon-md"></span></a>
+					<a class="social-lg" href="index.html"><span class="fa fa-pinterest-p icon-md"></span></a>
 				</div>
 			</div>
 		</div>
@@ -343,10 +329,27 @@
 <!-- Footer - bloc-6 -->
 <div class="bloc bgc-dark-jungle-green d-bloc" id="bloc-6">
 	<div class="container bloc-sm">
+		<div class="row none voffset-md">
+			<div class="col-sm-4">
+				<div class="text-center">
+					<span class="fa fa-tablet icon-md"></span>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="text-center">
+					<span class="fa fa-qq icon-md"></span>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="text-center">
+					<span class="fa fa-envelope icon-md"></span>
+				</div>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-xs-12 col-md-8 col-md-offset-2">
 				<h3 class="statement-bloc-text  text-center">
-					<span>手机：18658822090 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; QQ:1010963002 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 邮箱：m18658822090@163.com</span>
+					<span>18658822090 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1010963002 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;m18658822090@163.com</span>
 				</h3><img src="img/lazyload-ph.png" data-src="img/eweima.jpg" class="center-block mg-sm lazyload" width="120" height="120" />
 				<p class="text-center ">
 					Copyright © 2018 &nbsp;MengShiHai.com &nbsp;个人设计博客<br>
@@ -360,11 +363,6 @@
 </div>
 <!-- Main container END -->
     
-
-
-<!-- Preloader -->
-<div id="page-loading-blocs-notifaction"></div>
-<!-- Preloader END -->
 
 </body>
 </html>

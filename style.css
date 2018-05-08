@@ -23,6 +23,7 @@ a:hover{text-decoration: none; cursor:pointer;}
 	width:100%;
 	clear:both;
 	background: 50% 50% no-repeat;
+	padding:0 50px;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -50,7 +51,7 @@ a:hover{text-decoration: none; cursor:pointer;}
 .bloc-fill-screen{
 	padding-top:0;
 	position: relative;
-	height:100vh;
+	height: inherit;
 }
 .bloc-fill-screen > .container{
 	position:relative;
@@ -183,6 +184,9 @@ a:hover{text-decoration: none; cursor:pointer;}
 .voffset{
 	margin-top:30px;
 }
+.voffset-md{
+	margin-top:50px;
+}
 .voffset-lg{
 	margin-top:80px;
 }
@@ -213,17 +217,17 @@ a:hover{text-decoration: none; cursor:pointer;}
 	font-family: helvetica;
 	line-height: 70px;
 }
-#pa h2{
+#vb h2{
 	font-family: helvetica;
 	font-size: 44px;
 	line-height: 44px;
 }
-#pa p{
+#vb p{
 	font-family: helvetica;
 	font-size: 20px;
 	line-height: 40px;
 }
-#pa h3{
+#vb h3{
 	font-family: helvetica;
 	font-size: 20px;
 	line-height: 20px;
@@ -244,8 +248,20 @@ a:hover{text-decoration: none; cursor:pointer;}
 #bloc-3 p{
 	font-family: helvetica;
 }
+#bloc-3 h3{
+	font-size: 18px;
+}
+#bloc-4 h2{
+	font-family: helvetica;
+	font-size: 44px;
+	line-height: 44px;
+}
+#bloc-4 h3{
+	font-size: 16px;
+	line-height: 24px;
+}
 #bloc-6 h3{
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 60px;
 }
 #bloc-6 p{
@@ -271,9 +287,6 @@ a:hover{text-decoration: none; cursor:pointer;}
 	max-height: 200px;
 	margin: 0 5px 0 0;
 	display:inline;
-}
-.navbar-brand img[src$=svg]{
-	min-width:100px;
 }
 .nav-center .navbar-brand img{
 	margin:0;
@@ -486,25 +499,6 @@ button{
 	min-width: 162px;
 }
 
-/* Image Frame */
-.img-frame,.img-frame-md,.img-frame-lg,.img-frame-rd,.img-frame-rd-md,.img-frame-rd-lg{
-	background:#FFF;
-	border:1px solid rgba(0,0,0,0.1);
-	box-shadow:0 2px 2px rgba(0,0,0,0.05);
-	padding:4px;
-}
-.img-frame{
-	border-radius:3px;
-}
-.img-frame-md,.img-frame-lg{
-	border-radius:6px;
-}
-.img-frame-md,.img-frame-rd-md{
-	padding:8px;
-}
-.img-frame-lg,.img-frame-rd-lg{
-	padding:14px;
-}
 
 
 
@@ -597,39 +591,29 @@ a[data-lightbox]:hover img{
 	bottom: 5px;
 }
 .close-lightbox{
-	color:#FFF;
-	font-size: 30px;
+	display: none;
+	font-size: 40px;
 	position: absolute;
-	top:20px;
+	top:8px;
 	right:20px;
 	z-index: 20;
-	background:rgba(0,0,0,.5);
-	border:none;
-	line-height: 30px;
-	padding:0 9px 5px;
-	opacity: 0.3;
-}
-.close-lightbox:hover,.next-lightbox:hover, .prev-lightbox:hover{
-	opacity: 1.0;
-	color:#FFF;
 }
 .next-lightbox, .prev-lightbox{
 	font-size:20px;
-	color:rgba(255,255,255,.9);
-	background:rgba(0,0,0,.5);
+	color:rgba(255,255,255,.4);
 	transition: all .2s ease-in-out;
 	position: absolute;
-	top:45%;
+	top:50%;
 	z-index:1;
-	opacity: 0.4;
 }
 .next-lightbox{
-	padding:6px 8px 1px 13px;
 	right:25px;
 }
 .prev-lightbox{
-	padding:6px 13px 1px 10px;
 	left:25px;
+}
+.prev-lightbox:hover, .next-lightbox:hover{
+	color:rgba(255,255,255,.9);
 }
 
 /* = Custom Styling
@@ -732,25 +716,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .guanyu:hover{
 }
-
-.parallax > use{
-  animation:move-forever 4s linear infinite;
-}
-.parallax > use:nth-child(1){animation-delay:-2s}
-.parallax > use:nth-child(2){animation-delay:-4s; animation-duration:5s}
-
-@keyframes move-forever{
-  0%{transform: translate(-90px , 0%)}
-  100%{transform: translate(85px , 0%)} 
-}
-
-.editorial {
-  display: block;
-  width: 100%;
-  height: 180px;
-  margin: 0;
-}
-
 .icon01{
 	margin:60px 60px 60px 60px;
 }
@@ -759,6 +724,12 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 a{
 	margin:20px 20px 20px 20px;
+}
+.hero-bloc-text{
+	font-size:55px;
+}
+.hero-bloc-text-sub{
+	font-size:36px;
 }
 
 /* = Colour
@@ -795,24 +766,14 @@ a{
 	border-color:#FFFFFF!important;
 }
 
-/* Link colour styles */
-
-.ltc-olive-drab-7{
-	color:#333333!important;
-}
-.ltc-olive-drab-7:hover{
-	color:#292929!important;
-}
-
 /* Bloc image backgrounds */
 
 .bg-bj1{
 	background-image:url("img/bj1.jpg");
 }
 .bg-guanyu{
-	background-image: linear-gradient(154deg, #187ADF 0%, #2CD7F6 100%);
+	background-image:url("img/guanyu.png");
 }
-
 
 
 
@@ -839,15 +800,13 @@ a{
     }
 }
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {.b-parallax{background-attachment:scroll;}}
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {.b-parallax{background-attachment:scroll;}}
 @media (max-width: 991px)
 {
     .container{width:100%;}
     .b-parallax{background-attachment:scroll;}
     .page-container, #hero-bloc{overflow-x: hidden;position: relative;} /* Prevent unwanted side scroll on mobile */
-    .bloc{padding-left: constant(safe-area-inset-left);padding-right: constant(safe-area-inset-right);} /* iPhone X Notch Support*/
     .bloc-group, .bloc-group .bloc{display:block;width:100%;}
-    .bloc-fill-screen .fill-bloc-top-edge, .bloc-fill-screen .fill-bloc-bottom-edge{padding:0 20px;padding-left: constant(safe-area-inset-left);padding-right: constant(safe-area-inset-right);}
+    .bloc-tile-2 .container, .bloc-tile-3 .container, .bloc-tile-4 .container{padding-left: 10px;padding-right: 10px;}
 }
 @media (max-width: 767px)
 {
@@ -858,6 +817,15 @@ a{
     h1,h2,h3,h4,h5,h6,p,#disqus_thread{
         padding-left:10px!important; 
         padding-right:10px!important; 
+    }
+    #hero-bloc h1{
+        font-size:40px;
+    }
+    #hero-bloc h2{
+        font-size:34px;
+    }
+    #hero-bloc h3{
+        font-size:25px;
     }
     .b-parallax{
         background-attachment:scroll;
@@ -926,7 +894,6 @@ a{
     }
     .nav-invert .navbar-toggle{
         float:left; 
-        margin-left:10px;
     }
     .bloc{
         padding-left: 0; 
@@ -939,7 +906,7 @@ a{
         padding-left: 0; 
         padding-right: 0;
     }
-    .bloc-tile-2 .container, .bloc-tile-3 .container, .bloc-tile-4 .container, .bloc-fill-screen .fill-bloc-top-edge, .bloc-fill-screen .fill-bloc-bottom-edge{
+    .bloc-tile-2 .container, .bloc-tile-3 .container, .bloc-tile-4 .container{
         padding-left:0;padding-right:0;
     }
     .a-block{
@@ -982,7 +949,11 @@ a{
 {    
     .bloc{
         padding-left: 0; 
-        padding-right: 0;
+        padding-right: 0;  
+        -webkit-background-size: auto 200%;
+        -moz-background-size: auto 200%;
+        -o-background-size: auto 200%;
+        background-size: auto 200%;
     }
 }
 
