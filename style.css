@@ -16,6 +16,100 @@ a:hover{text-decoration: none; cursor:pointer;}
 
 #page-loading-blocs-notifaction{position: fixed;top: 0;bottom: 0;width: 100%;z-index:100000;background:#FFFFFF url("img/pageload-spinner.gif") no-repeat center center;}
 
+/*-------------------------tabs------------------------------------*/
+#tabs-container {
+
+}
+
+.tabs {
+    margin:50px auto;
+    height: 38px;
+    text-align: center;
+    position: relative;
+}
+
+.tabs a {
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: center;
+    margin:0 50px;
+    line-height: 38px;
+    color: #999;
+}
+
+.tabs a.active {
+    background-image: url(images/tab_ui.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 64px 39px;
+    -moz-background-size: 64px 39px;
+    -o-background-size: 64px 39px;
+    background-size: 64px 39px;
+    background-position: left top;
+    color: #343434;
+    font-weight: bolder;
+}
+.menu__line{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 120px;
+	height: 6px;
+	background-image: linear-gradient(270deg, #89F7FE 0%, #357EE8 88%);
+	box-shadow: 0 1px 3px 0 #53A9F0;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	-webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1);
+	transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
+}
+
+#tabs-family .swiper-slide{
+	height: 568px;
+}
+
+/*-swiper-*/
+.swiper-employ{
+	width: 1184px;
+	margin:0 auto;
+	overflow: hidden;
+	margin-top: 50px;
+	position: relative;
+	height: 240px;
+}
+.swiper-employ .swiper-slide{
+	width: 266px;
+	height: 150px;
+}
+.swiper-pagination ul{
+	margin-bottom:0;
+}
+.swiper-pagination li{
+	display: inline-block;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+.work-pic li{
+	float: left;
+}
+.work-pic{
+	width: 1210px;
+	margin: 0 auto;
+}
+.work-pic-normal{
+	text-align: center;
+	width: 1500px;
+    margin: 0 auto;
+}
+.work-pic-normal li{
+	display: inline-block;
+}
+.work-pic-normal-350 li{
+	width: 350px;
+}
+.work-pic-normal-480 li{
+	width: 480px;
+}
+
 /* = Blocs
 -------------------------------------------------------------- */
 
@@ -23,7 +117,7 @@ a:hover{text-decoration: none; cursor:pointer;}
 	width:100%;
 	clear:both;
 	background: 50% 50% no-repeat;
-	padding:0 50px;
+	padding:0;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -654,7 +748,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .statement-bloc-text{
 	line-height:38px;
-	font-style:italic;
 	font-size:28px;
 	text-align:center;
 	font-weight:lighter;
@@ -716,6 +809,25 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .guanyu:hover{
 }
+
+.parallax > use{
+  animation:move-forever 4s linear infinite;
+}
+.parallax > use:nth-child(1){animation-delay:-2s}
+.parallax > use:nth-child(2){animation-delay:-4s; animation-duration:5s}
+
+@keyframes move-forever{
+  0%{transform: translate(-90px , 0%)}
+  100%{transform: translate(85px , 0%)} 
+}
+
+.editorial {
+  display: block;
+  width: 100%;
+  height: 180px;
+  margin: 0;
+}
+
 .icon01{
 	margin:60px 60px 60px 60px;
 }
@@ -772,7 +884,7 @@ a{
 	background-image:url("img/bj1.jpg");
 }
 .bg-guanyu{
-	background-image:url("img/guanyu.png");
+	background-image: linear-gradient(154deg, #2CD7F6 0%, #187ADF 100%);
 }
 
 

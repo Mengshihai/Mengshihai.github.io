@@ -12,13 +12,15 @@
 	<link rel="stylesheet" type="text/css" href="./css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/ionicons.min.css">
-	
+	<link rel="stylesheet" type="text/css" href="./css/swiper-3.4.1.min.css">
     
 	<script src="./js/jquery-2.1.0.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/blocs.min.js"></script>
 	<script src="./js/jquery.touchSwipe.min.js" defer></script>
 	<script src="./js/lazysizes.min.js" defer></script>
+	<script type="text/javascript" src="./js/functions.js"></script>
+	<script type="text/javascript" src="./js/swiper-3.4.1.jquery.min.js"></script>
     <title>世海设计博客</title>
 
     
@@ -33,7 +35,7 @@
     
 <!-- bloc-0 -->
 <div class="bloc bloc-fill-screen bgc-white b-parallax bg-bj1 l-bloc " id="bloc-0">
-	<div class="container fill-bloc-top-edge b-divider-dashed sticky-nav">
+	<div class="container fill-bloc-top-edge sticky-nav">
 		<nav class="navbar row">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="index.html"><img src="img/Artboard%20Copy.png" alt="logo" width="44" height="44" /></a>
@@ -44,7 +46,7 @@
 			<div class="collapse navbar-collapse navbar-1">
 				<ul class="site-navigation nav navbar-nav pull-right">
 					<li>
-						<a class="pull-left" onclick="scrollToTarget(2)" id="pl-undefined">关于我</a>
+						<a class="pull-left" onclick="scrollToTarget('#bloc-1')" id="pl-undefined">关于我</a>
 					</li>
 					<li>
 						<a onclick="scrollToTarget('#bloc-2')" id="pl-undefined">个人技能</a>
@@ -62,7 +64,7 @@
 			</div>
 		</nav>
 	</div>
-	<div class="container b-divider-dashed">
+	<div class="container">
 		<div class="row voffset">
 			<div class="col-sm-12">
 				<h1 class="text-center mountain-hero-text fadeInUp  animated">
@@ -77,7 +79,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="container fill-bloc-bottom-edge b-divider-dashed">
+	<div class="container fill-bloc-bottom-edge">
 		<div class="row row-no-gutters">
 			<div class="col-sm-12">
 				<a id="scroll-hero" class="blocs-hero-btn-dwn" href="#"><span class="fa fa-chevron-down"></span></a>
@@ -89,7 +91,7 @@
 
 <!-- vb -->
 <div class="bloc bgc-white bg-guanyu d-bloc" id="vb">
-	<div class="container bloc-lg">
+	<div class="container bloc-lg" id="bloc-1">
 		<div class="row">
 			<div class="col-sm-12">
 				<h2 class="blocs-team-title  text-center tc-white guanyu">
@@ -107,8 +109,8 @@
 			<div class="col-sm-3"> <img src="img/grr.png" class="img-responsive pulse-hvr center-block animated" />
 				<h3 class="text-center blocs-team-header  tc-white">
 					男，94年
-			  </h3>
-		  </div>
+				</h3>
+			</div>
 			<div class="col-sm-3">
 				<img src="img/jg.png" class="img-responsive center-block pulse-hvr animated" />
 				<h3 class="text-center blocs-team-header  tc-white">
@@ -129,7 +131,19 @@
 			</div>
 		</div>
 	</div>
-	
+	<svg class="editorial" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+					 <defs>
+					  <path id="gentle-wave" d="m -160,44.4 c 30,0 58,
+					        -18 87.7,-18 30.3,0 58.3,
+					        18 87.3,18 30,0 58,-18 88,
+					        -18 30,0 58,18 88,18 l 0,
+					        34.5 -351,0 z"></path>
+					 </defs>
+					  <g class="parallax">
+					   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gentle-wave" x="50" y="0" fill="rgba(255,255,255,0.15)"></use>
+					   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gentle-wave" x="50" y="3" fill="rgba(255,255,255,0.15)"></use> 
+					  </g>
+				</svg>
 </div>
 <!-- vb END -->
 
@@ -233,45 +247,90 @@
 				</p>
 			</div>
 		</div>
-		<div class="row voffset-lg">
-			<div class="col-sm-4">
-				<a href="#" data-lightbox="img/01.png" data-gallery-id="gallery-1"><img src="img/lazyload-ph.png" data-src="img/01.png" class="img-responsive center-block lazyload" /></a>
-				<h3 class="text-center mg-md ">
-					喜悦-引导页
-				</h3>
-			</div>
-			<div class="col-sm-4">
-				<a href="#" data-lightbox="vid/demo002.mp4" data-gallery-id="gallery-1" data-autoplay="1"><img src="img/lazyload-ph.png" data-src="img/demo1.png" class="img-responsive center-block lazyload" /></a>
-				<h3 class="text-center mg-md ">
-					ROMANCE-Demo
-				</h3>
-			</div>
-			<div class="col-sm-4">
-				<a href="#" data-lightbox="vid/demo001_1.mp4" data-gallery-id="gallery-1" data-autoplay="1"><img src="img/lazyload-ph.png" data-src="img/demo2.png" class="img-responsive center-block lazyload" /></a>
-				<h3 class="text-center mg-md ">
-					交互-Dome
-				</h3>
-			</div>
+		<!--
+		<div class="tabs">
+			<a href="#" class="active">全部</a>
+			<a href="#">超写实</a>
+			<a href="#">界面</a>
+			<a href="#">动效</a>
+			<a href="#">壁纸</a>
+			<a href="#">运营</a>		
+			<span class="menu__line"></span>	
 		</div>
-		<div class="row voffset-lg voffset">
-			<div class="col-sm-4">
-				<a href="http://www.zcool.com.cn/work/ZMjY3MDM0NDA=.html" target="_blank"><img src="img/lazyload-ph.png" data-src="img/xiyue0.png" class="img-responsive center-block lazyload" /></a>
-				<h3 class="text-center mg-md ">
-					喜悦
-				</h3>
-			</div>
-			<div class="col-sm-4">
-				<a href="http://www.zcool.com.cn/work/ZMjY4MTgxMTY=.html" target="_blank"><img src="img/lazyload-ph.png" data-src="img/Health.png" class="img-responsive center-block lazyload" /></a>
-				<h3 class="text-center mg-md ">
-					Health-Material Design
-				</h3>
-			</div>
-			<div class="col-sm-4">
-				<a href="#" data-lightbox="img/cha.png" data-gallery-id="gallery-1"><img src="img/lazyload-ph.png" data-src="img/cha.png" class="img-responsive center-block lazyload" /></a>
-				<h3 class="text-center mg-md ">
-					Health-引导页
-				</h3>
-			</div>
+		-->
+		<!--
+		<div id="tabs-container">
+			<div class="swiper-wrapper">
+			    <div class="swiper-slide">
+			        <div class="content-slide">
+		-->
+						<div class="row voffset-lg">
+							<div class="col-sm-4">
+								<a href="#" data-lightbox="img/01.png" data-gallery-id="gallery-1"><img src="img/lazyload-ph.png" data-src="img/01.png" class="img-responsive center-block lazyload" /></a>
+								<h3 class="text-center mg-md ">
+									喜悦-引导页
+								</h3>
+							</div>
+							<div class="col-sm-4">
+								<a href="#" data-lightbox="vid/demo002.mp4" data-gallery-id="gallery-1" data-autoplay="1"><img src="img/lazyload-ph.png" data-src="img/demo1.png" class="img-responsive center-block lazyload" /></a>
+								<h3 class="text-center mg-md ">
+									ROMANCE-Demo
+								</h3>
+							</div>
+							<div class="col-sm-4">
+								<a href="#" data-lightbox="vid/demo001_1.mp4" data-gallery-id="gallery-1" data-autoplay="1"><img src="img/lazyload-ph.png" data-src="img/demo2.png" class="img-responsive center-block lazyload" /></a>
+								<h3 class="text-center mg-md ">
+									交互-Dome
+								</h3>
+							</div>
+						</div>
+						<div class="row voffset-lg voffset">
+							<div class="col-sm-4">
+								<a href="http://www.zcool.com.cn/work/ZMjY3MDM0NDA=.html" target="_blank"><img src="img/lazyload-ph.png" data-src="img/xiyue0.png" class="img-responsive center-block lazyload" /></a>
+								<h3 class="text-center mg-md ">
+									喜悦
+								</h3>
+							</div>
+							<div class="col-sm-4">
+								<a href="http://www.zcool.com.cn/work/ZMjY4MTgxMTY=.html" target="_blank"><img src="img/lazyload-ph.png" data-src="img/Health.png" class="img-responsive center-block lazyload" /></a>
+								<h3 class="text-center mg-md ">
+									Health-Material Design
+								</h3>
+							</div>
+							<div class="col-sm-4">
+								<a href="#" data-lightbox="img/cha.png" data-gallery-id="gallery-1"><img src="img/lazyload-ph.png" data-src="img/cha.png" class="img-responsive center-block lazyload" /></a>
+								<h3 class="text-center mg-md ">
+									Health-引导页
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+			        <div class="content-slide">
+						
+					</div>
+				</div>
+				<div class="swiper-slide">
+			        <div class="content-slide">
+						
+					</div>
+				</div>
+				<div class="swiper-slide">
+			        <div class="content-slide">
+						
+					</div>
+				</div>
+				<div class="swiper-slide">
+			        <div class="content-slide">
+						
+					</div>
+				</div>
+				<div class="swiper-slide">
+			        <div class="content-slide">
+						
+					</div>
+				</div>
 		</div>
 	</div>
 </div>
@@ -347,10 +406,31 @@
 			</div>
 		</div>
 		<div class="row">
+			<div class="col-sm-4">
+				<div class="text-center">
+					<h3 class="statement-bloc-text">
+						18658822090
+					</h3>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="text-center">
+					<h3 class="statement-bloc-text">
+						1010963002
+					</h3>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="text-center">
+					<h3 class="statement-bloc-text">
+						m18658822090@163.com
+					</h3>
+				</div>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-xs-12 col-md-8 col-md-offset-2">
-				<h3 class="statement-bloc-text  text-center">
-					<span>18658822090 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1010963002 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;m18658822090@163.com</span>
-				</h3><img src="img/lazyload-ph.png" data-src="img/eweima.jpg" class="center-block mg-sm lazyload" width="120" height="120" />
+				<img src="img/lazyload-ph.png" data-src="img/eweima.jpg" class="center-block mg-sm lazyload" width="120" height="120" />
 				<p class="text-center ">
 					Copyright © 2018 &nbsp;MengShiHai.com &nbsp;个人设计博客<br>
 				</p>
@@ -362,7 +442,117 @@
 
 </div>
 <!-- Main container END -->
-    
+<script type="text/javascript">
+    window.onload = function() {
+        var lineLeft = $(".tabs a").eq(0).offset().left
+        var lineWidth = $(".tabs a").eq(0).width()
+        $(".menu__line").css('left', lineLeft)
+        $(".menu__line").width(lineWidth)
+        var tabsSwiper = new Swiper('#tabs-container', {
+            speed: 500,
+            onSlideChangeStart: function() {
+                $(".tabs .active").removeClass('active')
+                $(".tabs a").eq(tabsSwiper.activeIndex).addClass('active')
+	            var lineLeft = $(".tabs a").eq(tabsSwiper.activeIndex).offset().left
+	            var lineWidth = $(".tabs a").eq(tabsSwiper.activeIndex).width()
+	            $(".menu__line").css('left', lineLeft)
+	            $(".menu__line").css('width', lineWidth)
+            }
+        })
+
+        $(".tabs a").on('touchstart mousedown', function(e) {
+            e.preventDefault()
+            $(".tabs .active").removeClass('active')
+            $(this).addClass('active')
+            tabsSwiper.slideTo($(this).index())
+            var lineLeft = $(".tabs a").eq($(this).index()).offset().left
+            var lineWidth = $(".tabs a").eq($(this).index()).width()
+            $(".menu__line").css('left', lineLeft)
+            $(".menu__line").css('width', lineWidth)
+        })
+        $(".tabs a").click(function(e) {
+            e.preventDefault()
+        })
+
+        var marginLeft = 0;
+        var tabsLecturer = new Swiper('#tabs-lecturer', {
+            speed: 500,
+            grabCursor: true,
+            onSlideChangeStart: function() {
+                $(".lecturer-list .lecturer-current").removeClass('lecturer-current')
+                $(".lecturer-list li").eq(tabsLecturer.activeIndex).addClass('lecturer-current')
+	            marginLeft = tabsLecturer.activeIndex*177.6
+	       		$(".lecturer-list-line").css('margin-left', marginLeft)
+            }
+        })
+        $(".lecturer-list li").on('touchstart mousedown', function(e) {
+            e.preventDefault()
+            $(".lecturer-list .lecturer-current").removeClass('lecturer-current')
+            $(this).addClass('lecturer-current')
+            tabsLecturer.slideTo($(this).index())
+            marginLeft = $(this).index()*177.6
+       		$(".lecturer-list-line").css('margin-left', marginLeft);
+        })
+        $(".lecturer-list li").click(function(e) {
+            e.preventDefault()
+        })
+
+        var tabsFamily = new Swiper('#tabs-family', {
+            speed: 500,
+            onSlideChangeStart: function() {
+                $(".family-list .current").removeClass('current')
+                $(".family-list li").eq(tabsFamily.activeIndex).addClass('current')
+            }
+        })
+
+        $(".family-list li").on('touchstart mouseover', function(e) {
+            e.preventDefault()
+            $(".family-list .current").removeClass('current')
+            $(this).addClass('current')
+            tabsFamily.slideTo($(this).index())
+        })
+        $(".family-list li").click(function(e) {
+            e.preventDefault()
+        })
+
+        var swiper = new Swiper('.swiper-employ', {
+	        pagination: '.swiper-pagination',
+	        paginationType: 'custom',
+	        paginationCustomRender: function (swiper, current, total) {
+	        	var _html = '<ul>';
+	            for (var i = 1; i <= total; i++) {
+	              if (current == i) {
+	                _html += '<li class="active">\
+										<svg width="16px" height="19px" viewBox="0 -1 16 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\
+										    <desc>Created with Sketch.</desc>\
+										    <defs>\
+										        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">\
+										            <stop stop-color="#FFCC03" offset="0%"></stop>\
+										            <stop stop-color="#ED9D2F" offset="100%"></stop>\
+										        </linearGradient>\
+										    </defs>\
+										    <path d="M10.2298376,8.50085494 L15.0017099,3.72898262 L12.2727273,1 L7.50085494,5.77187233 L2.72898262,1 L1.77635684e-15,3.72898262 L4.77187233,8.50085494 L0,13.2727273 L2.72898262,16.0017099 L7.50085494,11.2298376 L12.2727273,16.0017099 L15.0017099,13.2727273 L10.2298376,8.50085494 Z" id="Combined-Shape" stroke="none" fill="url(#linearGradient-5)" fill-rule="evenodd"></path>\
+										</svg></li>';
+	              }else{
+	                _html += '<li class="">\
+								<svg width="16px" height="19px" viewBox="39 -1 16 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\
+								    <desc>Created with Sketch.</desc>\
+								    <defs></defs>\
+								    <path d="M49.8947861,8.46014433 L54.6666585,3.688272 L51.9376758,0.959289386 L47.1658035,5.73116171 L42.3939312,0.959289386 L39.6649486,3.688272 L44.4368209,8.46014433 L39.6649486,13.2320167 L42.3939312,15.9609993 L47.1658035,11.1891269 L51.9376758,15.9609993 L54.6666585,13.2320167 L49.8947861,8.46014433 Z" id="img_xxx" stroke="none" fill="#DADBDF" fill-rule="evenodd" opacity="0.346807065"></path>\
+								</svg></li>';
+	              }
+	            }
+	            _html += '</ul>';
+			      return _html;
+			  },
+	        slidesPerView: 4,
+	        paginationClickable: true,
+	        spaceBetween: 40,
+      		grabCursor: true	        
+	    });   
+
+    }
+    </script>    
 
 </body>
 </html>
