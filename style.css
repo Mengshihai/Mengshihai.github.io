@@ -1128,4 +1128,9 @@ a{
 	margin-left:41%;
 }
  }
-
+.w_box{
+	box-shadow:0 8px 25px 10px #EEEEEE ;
+	}
+.w_header_bar.fadeInDown nav li a{
+	color:#333333 !important;
+	}
